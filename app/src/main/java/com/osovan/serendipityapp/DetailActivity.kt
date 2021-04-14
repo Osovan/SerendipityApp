@@ -19,10 +19,15 @@ class DetailActivity : AppCompatActivity() {
 
         val nook = intent.getParcelableExtra<Nook>(EXTRA_NOOK)
         if (nook != null) {
-            binding.nameNookDetail.text = nook.name
+            //set title to bar
+            title = nook.name
+
             Glide.with(this)
                 .load(nook.cover)
                 .into(binding.photoNook)
+
+            binding.descriptionDetail.text = nook.description
+            binding.locationDetail.text = nook.location
         }
     }
 }
