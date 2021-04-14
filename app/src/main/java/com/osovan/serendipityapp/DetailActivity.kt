@@ -2,6 +2,7 @@ package com.osovan.serendipityapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bumptech.glide.Glide
 import com.osovan.serendipityapp.databinding.ActivityDetailBinding
 
 
@@ -19,6 +20,9 @@ class DetailActivity : AppCompatActivity() {
         val nook = intent.getParcelableExtra<Nook>(EXTRA_NOOK)
         if (nook != null) {
             binding.nameNookDetail.text = nook.name
+            Glide.with(this)
+                .load(nook.cover)
+                .into(binding.photoNook)
         }
     }
 }
