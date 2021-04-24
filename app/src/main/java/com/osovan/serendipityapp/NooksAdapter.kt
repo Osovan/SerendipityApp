@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.osovan.serendipityapp.databinding.ViewNookItemBinding
+import com.osovan.serendipityapp.model.database.Nook
 
 interface NookClickedListener {
     fun onNookClicked(nook: Nook)
